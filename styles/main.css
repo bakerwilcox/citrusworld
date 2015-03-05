@@ -1,0 +1,307 @@
+body {
+  margin: 0;
+  background: #111;
+  }
+  .canvas {
+    position: relative;
+    float: left;
+    height: 340px;
+    font-size: 0;
+    white-space: nowrap;
+    overflow: hidden;
+
+  }
+
+  .canvas .scene {
+    position: relative;
+    width: 1024px;
+    height: 100%;
+    display: inline-block;
+    /*box-shadow: 0 0 1px rgba(255,0,0,.8);*/
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .canvas .scene.active,
+  .canvas .scene.prev,
+  .canvas .scene.next {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .canvas .layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .canvas .layer.back     { z-index: 1; }
+  .canvas .layer.mid      { z-index: 2; }
+  .canvas .layer.main     { z-index: 3; }
+  .canvas .layer.front,
+  .canvas .layer.detail   { z-index: 4; }
+
+  .canvas .layer > div {
+    position: absolute;
+    bottom: 0;
+    background-image: url(../img/spritesheet.png);
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+  }
+  .canvas .layer > div.texture {
+    background-image: url(../img/textures.png);
+    width: 100%;
+  }
+
+  .canvas .layer > div.mirror {
+    -moz-transform:    scaleX(-1);
+    -o-transform:      scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform:         scaleX(-1);
+    /*
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=0, M21=0, M22=1, SizingMethod='auto expand')";
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=-1,M12=0,M21=0,M22=1,SizingMethod='auto expand');
+     */
+  }
+
+  .canvas .sky > div,
+  .canvas .sun {
+    background-image: url(../img/spritesheet.png);
+   }
+
+   .canvas .sky {
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 340px;
+     background: #37A2D8;
+     overflow: hidden;
+     z-index: 0;
+  }
+  .canvas .sky > div {
+    display: inline-block;
+    -webkit-animation: sky 30s infinite linear;
+  }
+  @-webkit-keyframes sky {
+    to { -webkit-transform: translate3d(-100%,0, 0); }
+  }
+
+  .canvas .sun {
+    position: fixed;
+    left: 38%;
+    z-index: 0;
+    -webkit-animation: sun 20s infinite linear;
+  }
+  @-webkit-keyframes sun {
+    to { -webkit-transform: translate3d(0,0,0) rotate(360deg); }
+  }
+
+
+  .canvas .scene .texture.sea {
+    width: 102% !important;
+    left: -2%;
+    bottom: 40px;
+  }
+  .canvas .active.scene .texture.sea {
+    -webkit-animation: sea 5s infinite alternate ease-in-out;
+  }
+  @-webkit-keyframes sea {
+    to { -webkit-transform: translate3d(2%,0,0); }
+  }
+
+  .canvas .active.scene .texture.wave {
+    -webkit-animation: wave 3s infinite alternate ease-in-out;
+  }
+  @-webkit-keyframes wave {
+    to { -webkit-transform: translate3d(2%,10px,0); }
+  }
+
+  .canvas .scene .texture.rock {
+    height: 83px;
+  }
+  .canvas .scene .texture.grass,
+  .canvas .scene .texture.wood {
+    height: 40px;
+  }
+  .canvas .scene .texture.wallpaper {
+    width: 100%;
+    height: 100%;
+    background: #FFF url(../img/textures/texture.wallpaper.png);
+  }
+  .canvas .scene .wall {
+    width: 30px;
+    height: 100%;
+    background: #BFBBB3;
+  }
+
+  .canvas .active.scene .tree {
+    -webkit-transform-origin: center bottom;
+    -webkit-animation: tree 1s infinite alternate ease-in-out;
+  }
+  .canvas .active.scene .tree.mirror {
+    -webkit-animation-name: tree-mirror;
+  }
+  .canvas .active.scene .layer.front .tree {
+    -webkit-animation-delay: .5s;
+  }
+  @-webkit-keyframes tree {
+    to { -webkit-transform: rotate(1deg) translate3d(0,0,0); }
+  }
+  @-webkit-keyframes tree-mirror {
+    to { -webkit-transform: rotate(1deg) translate3d(0,0,0) scaleX(-1); }
+  }
+
+  .canvas .active.scene .anthena {
+    -webkit-transoform-origin: left bottom;
+    -webkit-animation: anthena .3s infinite alternate linear;
+  }
+  @-webkit-keyframes anthena {
+    to { -webkit-transform: translate3d(0,0,0) rotate(-4deg); }
+  }
+
+  .canvas .active.scene .small.house {
+    -webkit-transform-origin: center bottom;
+    -webkit-animation: house .5s infinite alternate ease-in-out;
+  }
+  @-webkit-keyframes house {
+    to { -webkit-transform: translate3d(0,0,0) rotate(1deg) scale(.98); }
+  }
+
+  .canvas .active.scene .boat {
+    -webkit-transform-origin: center bottom;
+    -webkit-animation: boat 1s infinite alternate ease-in-out;
+  }
+  @-webkit-keyframes boat {
+    to { -webkit-transform: translate3d(1px,1px,0)}
+  }
+
+  .canvas .active.scene .shark,
+  .canvas .active.scene .surfer {
+    -webkit-transform-origin: 200px 450px;
+    -webkit-animation: shark 3s infinite 1s alternate ease-in-out;
+    -webkit-transform: rotate(-30deg) translate3d(0,0,0);
+  }
+  @-webkit-keyframes shark {
+    to { -webkit-transform: rotate(60deg) translate3d(0,0,0);}
+  }
+
+  .canvas .active.scene .burglar {
+    -webkit-animation: burglar 4s infinite 1s alternate ease-in-out;
+    -webkit-transform: translate3d(0,70%,0);
+  }
+  @-webkit-keyframes burglar {
+    to { -webkit-transform: translate3d(0,0%,0); }
+  }
+
+  .canvas .scene .puppet {
+    bottom: 10px;
+  }
+
+  .puppet {
+    font-size: 0;
+    z-index: 4;
+    background: none !important;
+  }
+  .puppet .sprites {
+    width: 320px;
+    height: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 4;
+  }
+  .puppet .sprites div {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: no-repeat;
+    -webkit-animation: puppet 1s infinite linear;
+  }
+  @-webkit-keyframes puppet {
+    0%      { -webkit-transform: translate3d(0, 0, 0); }
+
+    9.089%   { -webkit-transform: translate3d(0, 0, 0); }
+    9.09%   { -webkit-transform: translate3d(-100%, 0, 0); }
+
+    18.179%  { -webkit-transform: translate3d(-100%, 0, 0); }
+    18.18%  { -webkit-transform: translate3d(-200%, 0, 0); }
+
+    27.269%  { -webkit-transform: translate3d(-200%, 0, 0); }
+    27.27%  { -webkit-transform: translate3d(-300%%, 0, 0); }
+
+    36.359%  { -webkit-transform: translate3d(-300%, 0, 0); }
+    36.36%  { -webkit-transform: translate3d(-400%, 0, 0); }
+
+    45.449%  { -webkit-transform: translate3d(-400%, 0, 0); }
+    45.45%  { -webkit-transform: translate3d(-500%, 0, 0); }
+
+    54.539%  { -webkit-transform: translate3d(-500%, 0, 0); }
+    54.54%  { -webkit-transform: translate3d(-600%, 0, 0); }
+
+    63.629%  { -webkit-transform: translate3d(-600%, 0, 0); }
+    63.63%  { -webkit-transform: translate3d(-700%, 0, 0); }
+
+    72.719%  { -webkit-transform: translate3d(-700%, 0, 0); }
+    72.72%  { -webkit-transform: translate3d(-800%, 0, 0); }
+
+    81.809%  { -webkit-transform: translate3d(-800%, 0, 0); }
+    81.81%  { -webkit-transform: translate3d(-900%, 0, 0); }
+
+    90.89%   { -webkit-transform: translate3d(-900%, 0, 0); }
+    90.9%   { -webkit-transform: translate3d(-1000%, 0, 0); }
+
+    99.999%    { -webkit-transform: translate3d(-1000%, 0, 0); }
+  }
+
+  #david {
+    position: fixed;
+    top: 100px;
+    left: 30%;
+  }
+  #david .sprites div {
+    background-image: url(../img/puppets/spritesheet_david_standing.png);
+  }
+  #david.waving .sprites div {
+    background-image: url(../img/puppets/spritesheet_david_waving.png);
+  }
+  #david.right .sprites div  {
+    background-image: url(../img/puppets/spritesheet_david_running.png);
+  }
+  #david.left .sprites div {
+    background-image: url(../img/puppets/spritesheet_david_running_mirror.png);
+  }
+
+  #nicola .sprites div {
+    background-image: url(../img/puppets/spritesheet_nicola_standing.png);
+  }
+  #john .sprites div {
+    background-image: url(../img/puppets/spritesheet_john_standing.png);
+  }
+  #samantha .sprites div {
+    background-image: url(../img/puppets/spritesheet_samantha_standing.png);
+  }
+  #richard .sprites div {
+    background-image: url(../img/puppets/spritesheet_fisher_standing.png);
+  }
+
+  .tooltip {
+    position: absolute;
+    right: -20%;
+    top: 0;
+    white-space: normal;
+    z-index: 5;
+    -webkit-animation: tooltip .2s infinite alternate ease-in-out;
+
+  }
+  .tooltip p {
+    width: 150px;
+    border: 3px solid #000;
+    margin: 0;
+    padding: 5px;
+    font: 18px 'Marker Felt';
+    text-align: center;
+    background: #FFF;
+  }
+  @-webkit-keyframes tooltip {
+    to { -webkit-transform: rotate(.8deg) translate3d(0,0,0) scale(1.02); }
+  }

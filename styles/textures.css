@@ -1,0 +1,45 @@
+.textures {
+    background-image: url(../img/textures.png);
+}
+
+.texture.grass {
+    background-position: 0px -487px;
+    display: block;
+    width: 512px;
+    height: 57px;
+}
+
+.texture.rock {
+    background-position: 0px -285px;
+    display: block;
+    width: 512px;
+    height: 135px;
+}
+
+.texture.sand {
+    background-position: 0px -420px;
+    display: block;
+    width: 512px;
+    height: 67px;
+}
+
+.texture.sea {
+    background-position: 0px 0px;
+    display: block;
+    width: 512px;
+    height: 149px;
+}
+
+.texture.wave {
+    background-position: 0px -149px;
+    display: block;
+    width: 512px;
+    height: 136px;
+}
+
+.texture.wood {
+    background-position: 0px -544px;
+    display: block;
+    width: 512px;
+    height: 51px;
+}

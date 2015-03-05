@@ -1,0 +1,460 @@
+<!doctype html>
+<meta charset='utf-8'>
+<title>CitrusWorld</title>
+<link rel='stylesheet' href='styles/spritesheet.css'>
+<link rel='stylesheet' href='styles/textures.css'>
+<link rel='stylesheet' href='styles/main.css'>
+<body>
+
+<div class='canvas'>
+  <div class='sky'>
+    <div class='cloud'></div>
+    <div class='cloud'></div>
+    <div class='cloud'></div>
+    <div class='cloud'></div>
+    <div class='cloud'></div>
+  </div>
+  <div class='sun'></div>
+  <div class='puppet' id='david'>
+    <div class='mask'>
+      <div class='sprites'>
+        <div style='background-position: -0px 0px'></div>
+        <div style='background-position: -320px 0px'></div>
+        <div style='background-position: -320px 0px'></div>
+        <div style='background-position: 0px -240px'></div>
+        <div style='background-position: -320px -240px'></div>
+        <div style='background-position: -640px 0px'></div>
+        <div style='background-position: -640px -240px'></div>
+        <div style='background-position: 0px -480px'></div>
+        <div style='background-position: -320px -480px'></div>
+        <div style='background-position: -640px -480px'></div>
+        <div style='background-position: 0px -720px'></div>
+        <div style='background-position: -320px -720px'></div>
+        <div style='background-position: -640px -720px'></div>
+      </div>
+    </div>
+    <div class='tooltip'></div>
+  </div>
+
+  <div class='scene'>
+
+    <div class='back layer'>
+      <div class='mountain' style='left: 28%; bottom: 50%'></div>
+      <div class='mountain' style='left: 53%; bottom: 50%'></div>
+      <div class='mountain' style='left: 40%; bottom: 50%'></div>
+    </div>
+
+    <div class='mid layer'>
+      <div class='texture sea'></div>
+    </div>
+
+    <div class='main layer'>
+      <div class='texture sand'></div>
+
+      <div class='tree palm' style='left: 25%; bottom: 30px;'></div>
+      <div class='tree palm mirror' style='left: 68%; bottom: 30px;'></div>
+      <div class='tree palm mirror' style='left: 90%; bottom: 30px;'></div>
+
+      <div class='surfboard' style='left: 40%'></div>
+      <div class='flipflop' style='left: 50%; bottom: 10px;'></div>
+      <div class='beach chair' style='left: 55%; bottom: 10px;'></div>
+
+      <div class='tree palm' style='left: 80%;'></div>
+    </div>
+
+    <div class='front layer'>
+      <div class='tree palm blur' style='bottom: -77px'></div>
+      <div class='tree palm blur mirror' style='left: 15%; bottom: -97px'></div>
+      <div class='tree palm blur mirror' style='left: 70%; bottom: -77px'></div>
+    </div>
+
+  </div>
+
+  <div class='scene' id='pensions'>
+    <div class='back layer'>
+      <div class='mountain' style='left: 0%; bottom: 50%;'></div>
+      <div class='mountain' style='left: 40%; bottom: 50%;'></div>
+      <div class='mountain' style='left: 20%; bottom: 50%;'></div>
+    </div>
+    <div class='mid layer'>
+      <div class='texture sea'></div>
+    </div>
+    <div class='main layer'>
+      <div class='texture sand'></div>
+      <div class='tree palm' style='left: 5%; bottom: 20px;'></div>
+      <div class='umbrella' style='left: 13%; bottom: 10px;'></div>
+      <div class='desk cocktail' style='left: 37%; bottom: 10px;'></div>
+      <div class='tree palm mirror' style='left: 42%; bottom: 20px;'></div>
+      <div class='beach chair mirror' style='left: 74%; bottom: 10px;'></div>
+      <div class='surfboard' style='left: 61%'></div>
+    </div>
+    <div class='detail layer'>
+      <div class='beach ball' style='left: 46%; bottom: -10px;'></div>
+    </div>
+    <div class='front layer'>
+      <div class='palm tree mirror blur' style='left: 70%; bottom: -77px;'></div>
+    </div>
+  </div>
+
+  <div class='scene' id='investments'>
+    <div class='back layer'>
+      <div class='mountain' style='left: 50%; bottom: 50%;'></div>
+    </div>
+    <div class='mid layer'>
+      <div class='texture sea'></div>
+    </div>
+    <div class='main layer'>
+      <div class='texture sand'></div>
+      <div class='palm tree' style='bottom: 10px;'></div>
+      <div class='beach chair' style='left: 26%; bottom: 10px;'></div>
+      <div class='beach ball' style='left: 20%; bottom: 10px;'></div>
+      <div class='flipchart' style='left: 40%; bottom: 20px;'></div>
+
+      <div class='wood crate' style='left: 68%; bottom: 20px;'></div>
+      <div class='wood crate' style='left: 73%; bottom: 110px;'></div>
+      <div class='wood crate' style='left: 79%; bottom: 20px;'></div>
+    </div>
+    <div class='detail layer'>
+      <div class='lemonade stand' style='left: 47%; bottom: -2px'></div>
+    </div>
+    <div class='front layer'>
+      <div class='palm tree blur mirror' style='left: -10%; bottom: -77px;'></div>
+      <div class='palm tree blur' style='left: 5%; bottom: -97px;'></div>
+      <div class='palm tree blur mirror' style='left: 80%; bottom: -77px;'></div>
+    </div>
+  </div>
+
+  <div class='scene'>
+    <div class='back layer'>
+      <div class='mountain' style='left: -2%; bottom: 50%'></div>
+      <div class='mountain' style='left: 10%; bottom: 50%'></div>
+    </div>
+    <div class='mid layer'>
+      <div class='texture sea'></div>
+    </div>
+    <div class='main layer'>
+      <div class='texture rock'></div>
+    </div>
+    <div class='front layer'>
+      <div class='palm tree blur mirror' style='left: 30%; bottom: -127px'></div>
+      <div class='palm tree blur' style='left: 50%; bottom: -77px'></div>
+    </div>
+  </div>
+
+  <div class='scene' id='income'>
+    <div class='back layer'>
+      <div class='mountain rock' style='left: 0%; bottom: 50%;'></div>
+      <div class='mountain rock mirror' style='left: 15%; bottom: 50%;'></div>
+      <div class='mountain rock' style='left: 30%; bottom: 50%;'></div>
+      <div class='boat' style='left: 50%; bottom: 48%'></div>
+    </div>
+    <div class='mid layer'>
+      <div class='texture sea'></div>
+
+      <div class='texture wave' style='left: 3%; bottom: 30px; -webkit-animation-delay: 1.5s'></div>
+      <div class='shark' style='left: 35%; bottom: 14%'></div>
+      <div class='surfer' style='left: 60%; bottom: 10%;'></div>
+      <div class='texture wave'></div>
+
+      <div class='waves'></div>
+    </div>
+    <div class='main layer'>
+      <div class='texture rock'></div>
+      <div class='flipflop' style='left: 72%'></div>
+    </div>
+    <div class='detail layer'>
+      <div class='surfboard' style='left: 75%; bottom: -30px;'></div>
+    </div>
+    <div class='front layer'>
+      <div class='mountain rock blur' style='left: -15%; bottom: -77px;'></div>
+      <div class='mountain rock blur' style='left: 80%; bottom: -107px;'></div>
+    </div>
+  </div>
+
+  <div class='scene'>
+    <div class='layer back'></div>
+    <div class='layer mid'>
+      <div class='wood fence'></div>
+      <div class='wood fence' style='left: 50%;'></div>
+    </div>
+    <div class='layer main'>
+      <div class='texture grass'></div>
+      <div class='tree'></div>
+    </div>
+    <div class='layer front'>
+      <div class='tree blur' style='left: 20%;'></div>
+    </div>
+  </div>
+
+  <div class='scene' id='contact'>
+    <div class='layer back'>
+      <div class='big mountain' style='left: 50%;'></div>
+      <div class='big mountain' style='left: 5%;'></div>
+    </div>
+    <div class='layer mid'>
+      <div class='fence wood'></div>
+    </div>
+    <div class='layer main'>
+      <div class='texture grass'></div>
+      <div class='telephone cabin' style='left: 40%; bottom: 20px;'></div>
+      <div class='sign direction' style='left: 50%; bottom: 20px;'></div>
+      <div class='tree' style='left: 60%;'></div>
+    </div>
+    <div class='layer front'>
+      <div class='tree blur mirror' style='left: -10%;'></div>
+    </div>
+  </div>
+
+  <div class='scene' id='life'>
+    <div class='main layer'>
+      <div class='texture wallpaper'></div>
+      <div class='texture wood'></div>
+      <div class='poster flu' style='left: 20%; top: 30%'></div>
+      <div class='poster cold' style='left: 65%; top: 30%'></div>
+      <div class='medical equipment' style='left: 70%;'></div>
+      <div class='medical bed' style='left: 30%;'></div>
+    </div>
+    <div class='detail layer'>
+      <div class='wall'></div>
+      <div class='door mirror' style='left: -125px;'></div>
+      <div class='wall' style='right: 0;'></div>
+      <div class='door' style='right: -125px;'></div>
+    </div>
+    <div class='front layer'>
+      <div class='medical equipment blur' style='left: 5%;'></div>
+    </div>
+  </div>
+
+  <div class='scene' id='health'>
+    <div class='main layer'>
+      <div class='texture wallpaper'></div>
+      <div class='texture wood'></div>
+      <div class='wait sign' style='left: 25%; top: 15%;'></div>
+      <div class='poster flu alt' style='left: 38%; top: 25%;'></div>
+      <div class='poster nhs' style='left: 48%; top: 25%;'></div>
+      <div class='medical sign' style='left: 70%; top: 15%;'></div>
+
+      <div class='green sofa' style='left: 15%; bottom: -10px;'></div>
+      <div class='reception desk' style='left: 58%; bottom: 20px;'></div>
+      <div class='macbook' style='left: 60%; bottom: 145px;'></div>
+      <div class='telephone' style='left: 78%; bottom: 140px;'></div>
+    </div>
+    <div class='detail layer'>
+      <div class='wall' style='right: 0;'></div>
+      <div class='door' style='left: 100%'></div>
+    </div>
+  </div>
+
+  <div class='scene'>
+    <div class='main layer'>
+      <div class='wood fence' style='left: 30%'></div>
+      <div class='wood fence' style='left: 63%'></div>
+      <div class='hospital sign' style='left: 40%; bottom: 30%'></div>
+      <div class='texture grass'></div>
+      <div class='lamp post' style='left: 80%; bottom: 15px;'></div>
+    </div>
+    <div class='front layer'>
+      <div class='lamp post blur' style='left: 50%;'></div>
+    </div>
+  </div>
+
+  <div class='scene' id='mortgages'>
+    <div class='back layer'>
+      <div class='big mountain' style='left: -10%'></div>
+      <div class='big mountain' style='left: 60%'></div>
+    </div>
+    <div class='main layer'>
+      <div class='big mountain' style='left: 8%'></div>
+      <div class='small house' style='left: 43%; bottom: 120px;'></div>
+      <div class='texture grass'></div>
+    </div>
+  </div>
+
+  <div class='scene' id='building'>
+    <div class='back layer'>
+      <div class='big mountain'></div>
+      <div class='big mountain' style='left: 50%'></div>
+    </div>
+    <div class='main layer'>
+      <div class='burglar' style='bottom: 120px; left: 20%;'></div>
+      <div class='wood fence' style='left: 5%; bottom: -80px;'></div>
+      <div class='grass texture'></div>
+      <div class='big house' style='left: 35%'></div>
+      <div class='big house' style='left: 60%'></div>
+      <div class='tree' style='left: -10%'></div>
+      <div class='tree mirror' style='right: -5%'></div>
+    </div>
+    <div class='front layer'>
+      <div class='tree blur' style='right: 0; bottom: -40px;'></div>
+    </div>
+  </div>
+
+  <div class='scene' id='media'>
+    <div class='main layer'>
+      <div class='texture grass'></div>
+      <div class='bbc' style='left: 25%; bottom: -10px'></div>
+      <div class='anthena' style='left: 67%; bottom: 20px'></div>
+    </div>
+  </div>
+
+  <div class='scene' id='citrus'>
+    <div class='main layer'>
+      <div class='texture grass'></div>
+    </div>
+    <div class='detail layer'>
+      <div class='office' style='right: 0;'></div>
+      <div class='door mirror' style='right: 618px;'></div>
+      <div class='door' style='right: -125px;'></div>
+    </div>
+  </div>
+
+  <div class='scene' id='testimonials'>
+    <div class='main layer'>
+      <div class='texture wallpaper'></div>
+      <div class='texture wood'></div>
+      <div class='photo frame horizontal man' style='left: 50%; top: 10%; background-color: #FFD2D5'></div>
+      <div class='photo frame vertical man' style='left: 20%; top: 20%; background-color: #C4FFCA'></div>
+      <div class='photo frame horizontal woman' style='left: 30%; top: 10%; background-color: #D3E8FF'></div>
+      <div class='photo frame vertical woman' style='left: 40%; top: 15%; background-color: #FFFED3'></div>
+      <div class='photo frame horizontal woman' style='left: 65%; top: 20%; background-color: #D0C6FF'></div>
+      <div class='photo frame vertical man' style='left: 75%; top: 15%; background-color: #CDEFFF'></div>
+      <div class='photo frame horizontal woman' style='left: 83%; top: 25%; background-color: #FFFBFB'></div>
+
+      <div class='brown sofa' style='left: 40%; bottom: -10px;'></div>
+      <div class='office desk' style='right: 3%; bottom: 13px;'></div>
+    </div>
+    <div class='front layer'>
+      <div class='floor lamp blur' style='left: 15%'></div>
+      <div class='bookshelf blur mirror' style='right:20%'></div>
+    </div>
+  </div>
+
+  <div class='scene' id='downloads'>
+    <div class='main layer'>
+      <div class='texture wallpaper'></div>
+      <div class='texture wood'></div>
+      <div class='poster balls' style='left: 20%; bottom: 35%;'></div>
+      <div class='copy machine' style='left: 30%; bottom: 20px;'></div>
+      <div class='bookshelf' style='left: 55%; bottom: 20px;'></div>
+      <div class='door' style='right: 5%; bottom: 28px;'></div>
+    </div>
+    <div class='detail layer'>
+      <div class='wall'></div>
+    </div>
+    <div class='front layer'>
+      <div class='bookshelf blur' style='left: 10%;'></div>
+      <div class='floor lamp blur' style='right: 10%;'></div>
+    </div>
+  </div>
+
+  <div class='scene' id='people'>
+    <div class='main layer'>
+      <div class='texture wallpaper'></div>
+      <div class='texture wood'></div>
+      <div class='poster balls' style='right: 20%; top: 21%'></div>
+      <div class='clock' style='left: 38%; top: 20%'></div>
+      <div class='office desk' style='left: 50%; bottom: 12px;'></div>
+      <div class='office chair' style='left: 42%'></div>
+      <div class='macbook' style='left: 53%; bottom: 120px;'></div>
+      <div class='office desk' style='left: 10%; bottom: 12px;'></div>
+      <div class='telephone' style='left: 25%; bottom: 114px;'></div>
+      <div class='door' style='right: 5%; bottom: 28px;'></div>
+
+      <div class='puppet' id='john'>
+        <div class='mask'>
+          <div class='sprites'>
+            <div style='background-position: -0px 0px'></div>
+            <div style='background-position: -320px 0px'></div>
+            <div style='background-position: -320px 0px'></div>
+            <div style='background-position: 0px -240px'></div>
+            <div style='background-position: -320px -240px'></div>
+            <div style='background-position: -640px 0px'></div>
+            <div style='background-position: -640px -240px'></div>
+            <div style='background-position: 0px -480px'></div>
+            <div style='background-position: -320px -480px'></div>
+            <div style='background-position: -640px -480px'></div>
+            <div style='background-position: 0px -720px'></div>
+            <div style='background-position: -320px -720px'></div>
+            <div style='background-position: -640px -720px'></div>
+          </div>
+        </div>
+        <div class='tooltip'></div>
+      </div>
+      <div class='puppet' id='samantha' style='left: 10%; bottom: 12px'>
+        <div class='mask'>
+          <div class='sprites'>
+            <div style='background-position: -0px 0px'></div>
+            <div style='background-position: -320px 0px'></div>
+            <div style='background-position: -320px 0px'></div>
+            <div style='background-position: 0px -240px'></div>
+            <div style='background-position: -320px -240px'></div>
+            <div style='background-position: -640px 0px'></div>
+            <div style='background-position: -640px -240px'></div>
+            <div style='background-position: 0px -480px'></div>
+            <div style='background-position: -320px -480px'></div>
+            <div style='background-position: -640px -480px'></div>
+            <div style='background-position: 0px -720px'></div>
+            <div style='background-position: -320px -720px'></div>
+            <div style='background-position: -640px -720px'></div>
+          </div>
+        </div>
+        <div class='tooltip'></div>
+      </div>
+      <div class='puppet' id='nicola' style='left: 50%; bottom: 8px;'>
+        <div class='mask'>
+          <div class='sprites'>
+            <div style='background-position: -0px 0px'></div>
+            <div style='background-position: -320px 0px'></div>
+            <div style='background-position: -320px 0px'></div>
+            <div style='background-position: 0px -240px'></div>
+            <div style='background-position: -320px -240px'></div>
+            <div style='background-position: -640px 0px'></div>
+            <div style='background-position: -640px -240px'></div>
+            <div style='background-position: 0px -480px'></div>
+            <div style='background-position: -320px -480px'></div>
+            <div style='background-position: -640px -480px'></div>
+            <div style='background-position: 0px -720px'></div>
+            <div style='background-position: -320px -720px'></div>
+            <div style='background-position: -640px -720px'></div>
+          </div>
+        </div>
+        <div class='tooltip'></div>
+      </div>
+      <div class='puppet' id='richard' style='left:62%; bottom: 14px;'>
+        <div class='mask'>
+          <div class='sprites'>
+            <div style='background-position: -0px 0px'></div>
+            <div style='background-position: -320px 0px'></div>
+            <div style='background-position: -320px 0px'></div>
+            <div style='background-position: 0px -240px'></div>
+            <div style='background-position: -320px -240px'></div>
+            <div style='background-position: -640px 0px'></div>
+            <div style='background-position: -640px -240px'></div>
+            <div style='background-position: 0px -480px'></div>
+            <div style='background-position: -320px -480px'></div>
+            <div style='background-position: -640px -480px'></div>
+            <div style='background-position: 0px -720px'></div>
+            <div style='background-position: -320px -720px'></div>
+            <div style='background-position: -640px -720px'></div>
+          </div>
+        </div>
+        <div class='tooltip'></div>
+      </div>
+    </div>
+    <div class='front layer'>
+      <div class='suitcase'></div>
+      <div class='floor lamp blur' style='right: 10%;'></div>
+    </div>
+  </div>
+
+  <div class='scene'>
+    <div class='main layer'>
+      <div class='texture wallpaper'></div>
+      <div class='texture wood'></div>
+    </div>
+  </div>
+</div>
+
+<script src='scripts/jquery.js'></script>
+<script src='scripts/jquery.scroll.js'></script>
+<script src='scripts/main.js'></script>

@@ -1,0 +1,437 @@
+.spritesheet {
+    background-image: url(../img/spritesheet.png);
+}
+
+.anthena {
+    background-position: -1613px -720px;
+    display: block;
+    width: 114px;
+    height: 115px;
+}
+
+.ball.beach {
+    background-position: -1877px -1083px;
+    display: block;
+    width: 62px;
+    height: 63px;
+}
+
+.bbc {
+    background-position: 0px -1158px;
+    display: block;
+    width: 568px;
+    height: 265px;
+}
+
+.bed.medical {
+    background-position: -801px -1158px;
+    display: block;
+    width: 343px;
+    height: 186px;
+}
+
+.boat {
+    background-position: -1613px -1263px;
+    display: block;
+    width: 129px;
+    height: 60px;
+}
+
+.bookshelf {
+    background-position: -578px -1158px;
+    display: block;
+    width: 213px;
+    height: 247px;
+}
+
+.bookshelf.blur {
+    background-position: -1613px -845px;
+    display: block;
+    width: 304px;
+    height: 110px;
+}
+
+.burglar {
+    background-position: -791px -1433px;
+    display: block;
+    width: 91px;
+    height: 149px;
+}
+
+.chair.beach {
+    background-position: -1700px -965px;
+    display: block;
+    width: 105px;
+    height: 104px;
+}
+
+.chair.office {
+    background-position: -1433px -1158px;
+    display: block;
+    width: 93px;
+    height: 166px;
+}
+
+.clock {
+    background-position: -1868px -1263px;
+    display: block;
+    width: 53px;
+    height: 53px;
+}
+
+.cloud {
+    background-position: -1613px -449px;
+    display: block;
+    width: 323px;
+    height: 131px;
+}
+
+.desk.cocktail {
+    background-position: -1613px -590px;
+    display: block;
+    width: 65px;
+    height: 120px;
+}
+
+.desk.office {
+    background-position: -1688px -590px;
+    display: block;
+    width: 260px;
+    height: 119px;
+}
+
+.desk.reception {
+    background-position: -1613px 0px;
+    display: block;
+    width: 336px;
+    height: 142px;
+}
+
+.door {
+    background-position: -1188px -844px;
+    display: block;
+    width: 125px;
+    height: 250px;
+}
+
+.equipment.medical {
+    background-position: -1323px -844px;
+    display: block;
+    width: 146px;
+    height: 250px;
+}
+
+.equipment.medical.blur {
+    background-position: -971px -837px;
+    display: block;
+    width: 188px;
+    height: 218px;
+}
+
+.flipchart {
+    background-position: -1482px -567px;
+    display: block;
+    width: 81px;
+    height: 190px;
+}
+
+.flipflop {
+    background-position: -1838px -1403px;
+    display: block;
+    width: 51px;
+    height: 30px;
+}
+
+.house.big {
+    background-position: 0px 0px;
+    display: block;
+    width: 450px;
+    height: 495px;
+}
+
+.house.small {
+    background-position: -1356px -1433px;
+    display: block;
+    width: 123px;
+    height: 143px;
+}
+
+.lamp.floor.blur {
+    background-position: -1283px -1158px;
+    display: block;
+    width: 140px;
+    height: 173px;
+}
+
+.lamp.post {
+    background-position: -1538px -288px;
+    display: block;
+    width: 39px;
+    height: 250px;
+}
+
+.lamp.post.blur {
+    background-position: -1040px -505px;
+    display: block;
+    width: 65px;
+    height: 280px;
+}
+
+.macbook {
+    background-position: -1807px -1333px;
+    display: block;
+    width: 96px;
+    height: 54px;
+}
+
+.machine.copy {
+    background-position: -892px -1433px;
+    display: block;
+    width: 200px;
+    height: 146px;
+}
+
+.mountain {
+    background-position: -1613px -1186px;
+    display: block;
+    width: 312px;
+    height: 67px;
+}
+
+.mountain.big {
+    background-position: 0px -1433px;
+    display: block;
+    width: 781px;
+    height: 167px;
+}
+
+.mountain.rock {
+    background-position: -1613px -152px;
+    display: block;
+    width: 190px;
+    height: 140px;
+}
+
+.mountain.rock.blur {
+    background-position: -1188px 0px;
+    display: block;
+    width: 415px;
+    height: 278px;
+}
+
+.office {
+    background-position: 0px -837px;
+    display: block;
+    width: 621px;
+    height: 311px;
+}
+
+.photo.frame.horizontal.man {
+    background-position: -1698px -1403px;
+    display: block;
+    width: 60px;
+    height: 48px;
+}
+
+.photo.frame.horizontal.woman {
+    background-position: -1768px -1403px;
+    display: block;
+    width: 60px;
+    height: 48px;
+}
+
+.photo.frame.vertical.man {
+    background-position: -1752px -1263px;
+    display: block;
+    width: 48px;
+    height: 60px;
+}
+
+.photo.frame.vertical.woman {
+    background-position: -1810px -1263px;
+    display: block;
+    width: 48px;
+    height: 60px;
+}
+
+.poster.balls {
+    background-position: -1813px -152px;
+    display: block;
+    width: 83px;
+    height: 132px;
+}
+
+.poster.cold {
+    background-position: -1613px -965px;
+    display: block;
+    width: 77px;
+    height: 108px;
+}
+
+.poster.flu {
+    background-position: -1846px -302px;
+    display: block;
+    width: 79px;
+    height: 125px;
+}
+
+.poster.flu.alt {
+    background-position: -1737px -720px;
+    display: block;
+    width: 81px;
+    height: 113px;
+}
+
+.poster.nhs {
+    background-position: -1828px -720px;
+    display: block;
+    width: 78px;
+    height: 110px;
+}
+
+.shark {
+    background-position: -1613px -302px;
+    display: block;
+    width: 223px;
+    height: 137px;
+}
+
+.sign.direction {
+    background-position: -1154px -1158px;
+    display: block;
+    width: 119px;
+    height: 179px;
+}
+
+.sign.hospital {
+    background-position: -1613px -1083px;
+    display: block;
+    width: 81px;
+    height: 93px;
+}
+
+.sign.medical {
+    background-position: -1815px -965px;
+    display: block;
+    width: 93px;
+    height: 94px;
+}
+
+.sign.wait {
+    background-position: -1804px -1083px;
+    display: block;
+    width: 63px;
+    height: 88px;
+}
+
+.sofa.brown {
+    background-position: -1102px -1433px;
+    display: block;
+    width: 244px;
+    height: 146px;
+}
+
+.sofa.green {
+    background-position: -820px -350px;
+    display: block;
+    width: 241px;
+    height: 143px;
+}
+
+.stand.lemonade {
+    background-position: -1188px -567px;
+    display: block;
+    width: 175px;
+    height: 267px;
+}
+
+.suitcase {
+    background-position: -1613px -1333px;
+    display: block;
+    width: 184px;
+    height: 60px;
+}
+
+.sun {
+    background-position: -713px -505px;
+    display: block;
+    width: 317px;
+    height: 317px;
+}
+
+.surfboard {
+    background-position: 0px -505px;
+    display: block;
+    width: 160px;
+    height: 322px;
+}
+
+.surfer {
+    background-position: -1479px -844px;
+    display: block;
+    width: 100px;
+    height: 189px;
+}
+
+.telephone {
+    background-position: -1613px -1403px;
+    display: block;
+    width: 75px;
+    height: 50px;
+}
+
+.telephone.cabin {
+    background-position: -1373px -567px;
+    display: block;
+    width: 99px;
+    height: 265px;
+}
+
+.tree {
+    background-position: -170px -505px;
+    display: block;
+    width: 259px;
+    height: 320px;
+}
+
+.tree.blur {
+    background-position: -820px 0px;
+    display: block;
+    width: 358px;
+    height: 340px;
+}
+
+.tree.palm {
+    background-position: -439px -505px;
+    display: block;
+    width: 264px;
+    height: 319px;
+}
+
+.tree.palm.blur {
+    background-position: -460px 0px;
+    display: block;
+    width: 350px;
+    height: 423px;
+}
+
+.umbrella {
+    background-position: -631px -837px;
+    display: block;
+    width: 330px;
+    height: 300px;
+}
+
+.wood.crate {
+    background-position: -1704px -1083px;
+    display: block;
+    width: 90px;
+    height: 90px;
+}
+
+.wood.fence {
+    background-position: -1188px -288px;
+    display: block;
+    width: 340px;
+    height: 269px;
+}
